@@ -1,0 +1,9 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="LoginTest"> <!-- any name here --> 
+    <test name="Login Tests">
+        <classes>
+            <class name="tests.LoginTest"/> <!-- can add more classes indipendently  --> 
+        </classes>
+    </test>
+</suite> 
