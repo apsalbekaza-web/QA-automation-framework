@@ -35,9 +35,9 @@ public class LoginTest extends BaseTest {
     public Object[][] getData(){     // this is alternative data coming from script vs external file but still Data Driven Testing
 
         return new Object[][]{
-            {"1st) Helloooooooooooooo Text Are Textbox", "1st) Hello Input Textbox"},
-            {"2nd) Hello Text Are Textbox", "2nd) Hello Input Textbox"},
-            {"3rd) Hello Text Are Textbox", "3rd) Hello Input Textbox"},
+            {"1st) Textarea", "1st) Text Input"},
+            {"2nd) Textarea", "2nd) Text Input"},
+            {"3rd) Textarea", "3rd) Text Input"},
         };
     }
     
@@ -58,6 +58,21 @@ public class LoginTest extends BaseTest {
         test.info("ENTERING TEXT INTO Textbox");
         //loginPage.enterInputTextBox("INPUT TEXTBOX"); // Data Driver testing
         loginPage.enterInputTextBox(inputTextbox);
+
+        Log.info("Selecting from Dropdown");
+        test.info("SELECTING FROM DROPDOWN");
+        loginPage.selectDropDownOption("Two");
+
+        //Log.info("Selecting date from Date Picker");
+        //test.info("SELECTING DATE FROM DATE PICKER");
+        //loginPage.selectDate(15);
+
+        Log.info("Selecting date from Date Picker");
+        test.info("SELECTING DATE FROM DATE PICKER");
+        loginPage.selectCurrentDate();
+
+
+
 
         test.info("CLICKING ON SUBMIT BUTTON");
         loginPage.clickSubmitButton();
